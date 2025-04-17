@@ -1,0 +1,483 @@
+:root {
+    /* 🌟 Primary Palette */
+    --primary: #0D6C4F;
+    /* Dark Green - buttons, headers, CTA */
+    --dark: #0A4C34;
+    /* Deep Green - footers, backgrounds */
+    --secondary: #F4C038;
+    /* Golden Yellow - highlights, icons */
+
+    /* 🌿 Secondary Palette */
+    --success: #D4E7D6;
+    /* Light Green - soft backgrounds */
+    --info: #C3A078;
+    /* Soft Brown - overlays, accents */
+    --light: #F9F6F0;
+    /* Light Beige - cards, sections */
+
+    /* 🖤 Grayscale */
+    --gray-100: #EDEDED;
+    /* Light Gray - borders, dividers */
+    --gray-700: #777777;
+    /* Medium Gray - secondary text */
+    --gray-900: #333333;
+    /* Dark Gray - titles, body text */
+    --white: #FFFFFF;
+    --nav-height: 60px;
+    --nav-icon-size: 24px;
+
+    /* White - base or text on dark */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* section {
+    margin: 20px 0;
+} */
+
+/* Custom toggle button effects (keep these) */
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon path {
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-btn[aria-expanded="true"] .top-line {
+    transform: translateY(6px) rotate(45deg);
+    transform-origin: center;
+}
+
+.toggle-btn[aria-expanded="true"] .middle-line {
+    opacity: 0;
+}
+
+.toggle-btn[aria-expanded="true"] .bottom-line {
+    transform: translateY(-6px) rotate(-45deg);
+    transform-origin: center;
+}
+
+.navbar-collapse {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-collapse.collapsing {
+    opacity: 0.8;
+    transform: translateY(-10px);
+}
+
+.navbar-collapse.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom button width if truly needed */
+.nav-btn {
+    min-width: 120px;
+    /* Better than percentage */
+}
+
+/* Custom underline effect (enhancement) */
+.nav-link {
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* 
+Optional: change color on hover */
+/* .toggle-btn:hover .toggle-ico {
+    filter: brightness(0.7);
+} */
+
+.c-item {
+    height: 550px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.c-cap {
+    bottom: 30%;
+}
+
+/* image-sec */
+.content-section {
+    padding: 2rem 1rem;
+}
+
+.image-container {
+    /* box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2); */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-container {
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .text-container {
+        padding-left: 2rem;
+    }
+}
+
+/* our volunteers */
+.our-volunteers-section {
+    position: relative;
+}
+
+.btn-nav {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.btn-nav:hover {
+    opacity: 1;
+}
+
+.scroll-box {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.scroll-box::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.volunteer-card {
+    width: 280px;
+}
+
+.user-picture {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 3px solid #e9ecef;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .volunteer-card {
+        width: 240px;
+    }
+
+    .btn-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+/* our programs */
+/* #or-prgms-c .carousel-indicators {
+    margin: 10px 0;
+}
+
+#or-prgms-c>.carousel-indicators>button {
+    height: 15px;
+    width: 15px;
+} */
+
+.u-events-c .content-section {
+    box-shadow: 1px 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* donate us  */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+.bounce-hover:hover {
+    animation: bounce 0.5s;
+}
+
+.slide-hover:hover {
+    transform: translateX(5px);
+}
+
+.highlight-text {
+    position: relative;
+}
+
+.highlight-text::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #ffc107;
+    transition: width 0.3s ease;
+}
+
+.highlight-text:hover::after {
+    width: 100%;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.fade-in-text {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+    .donation-cta {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .display-md-5 {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+
+@media (max-width: 576px) {
+    .donation-cta {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* image-text-component */
+.or-wrk-wy-box {
+    background-color: inherit;
+    /* Matches website background */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 2rem 0;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.text-container {
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+    .or-wrk-wy-box {
+        margin: 1rem 0;
+        padding: 1rem 0;
+    }
+
+    .text-container {
+        padding: 0;
+    }
+
+    .image-container img {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* our services card */
+.modern-card {
+    width: 100%;
+    max-width: 270px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.modern-card .icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.modern-card:hover .icon-wrapper {
+    background-color: #f1f8ff;
+}
+
+.modern-card .icon-wrapper img {
+    width: 36px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.modern-card:hover .icon-wrapper img {
+    transform: scale(1.1);
+}
+
+.modern-card h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-align: center;
+    color: #212529;
+}
+
+.modern-card p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 575.98px) {
+    .modern-card {
+        padding: 1.25rem;
+        max-width: 100%;
+    }
+
+    .modern-card .icon-wrapper {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+    }
+
+    .modern-card .icon-wrapper img {
+        width: 32px;
+    }
+
+    .modern-card h5 {
+        font-size: 1.05rem;
+    }
+
+    .modern-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .modern-card {
+        max-width: 320px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .modern-card {
+        max-width: 280px;
+    }
+}
