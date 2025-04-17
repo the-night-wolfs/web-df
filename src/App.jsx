@@ -6,6 +6,8 @@ import JoinUs from './pages/JoinUs'
 import DonateUs from './pages/Donate'
 import Contact from './pages/Contact'
 import OurWork from './pages/Work'
+import Navbar from './components/sections/NavBar'
+// import Donation from '../test/index'
 function App() {
 
   return (
@@ -14,12 +16,18 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/donate" element={<DonateUs />} />
+        <Route path="/donate" element={<>
+        <Navbar/><DonateUs /></>} />
         <Route path="/ourwork" element={<OurWork />} />
         <Route path="/ourwork" element={<JoinUs />} />
       </Routes>
     </>
   )
 }
+// function App() {
+//   return(
 
+//     <Donation />
+//   )
+// }
 export default App

@@ -2,7 +2,7 @@ import React from "react";
 import BrandLogo from '/vite.svg'
 import { Link } from "react-router-dom";
 import '../../styles/styles.css'
-const Navbar = () => {
+const Navbar = () => { 
     return (
         <section className="nav-sec container-fluid">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,7 +53,7 @@ const Navbar = () => {
                         {/* Action Buttons */}
                         <div className="d-flex flex-column flex-lg-row gap-2 my-2 my-lg-0 ms-lg-3">
                             <div className="nav-action-item">
-                                <Link to={'/donateus'}  className="btn btn-outline-primary px-3 px-lg-4 py-2">
+                                <Link to={'/donate'}  className="btn btn-outline-primary px-3 px-lg-4 py-2">
                                     Donate Us
                                 </Link>
                             </div>

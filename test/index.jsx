@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/global.css';
+import './test.css'; // Optional: for any custom styles
 
 // Icon components
 const HeartIcon = () => (
