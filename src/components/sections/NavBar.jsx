@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import '../../styles/styles.css'
 const Navbar = () => { 
     return (
-        <section className="nav-sec container-fluid">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <section className="nav-sec container-fluid bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-light text-white">
                 <div className="container-fluid px-3 px-xl-4">
                     {/* Brand Logo & Name */}
                     <div className="d-flex align-items-center">
@@ -53,12 +53,12 @@ const Navbar = () => {
                         {/* Action Buttons */}
                         <div className="d-flex flex-column flex-lg-row gap-2 my-2 my-lg-0 ms-lg-3">
                             <div className="nav-action-item">
-                                <Link to={'/donate'}  className="btn btn-outline-primary px-3 px-lg-4 py-2">
+                                <Link to={'/donate'}  className="btn btn-primary px-3 px-lg-4 py-2 bg-secondary">
                                     Donate Us
                                 </Link>
                             </div>
                             <div className="nav-action-item">
-                                <Link to={'/joinus'}  className="btn btn-primary px-3 px-lg-4 py-2 text-white">
+                                <Link to={'/joinus'}  className="btn btn-primary px-3 px-lg-4 py-2 text-white bg-secondary">
                                     Join Us
                                 </Link>
                             </div>

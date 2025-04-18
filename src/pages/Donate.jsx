@@ -1,5 +1,6 @@
-import React from 'react'
+import React,{useEffect} from "react";
 import '../styles/global.css';
+
 
 // Icon components
 const HeartIcon = () => (
@@ -22,6 +23,12 @@ const VolunteerIcon = () => (
 );
 
 function DonationPage() {
+  useEffect(()=>{
+    let script=document.createElement('script')
+    script.src='/js/donateUs.js'
+    script.async = true;
+    document.body.insertBefore(script,document.body.firstChild);
+},[])
   return (
     <>
       <div className="container py-5">

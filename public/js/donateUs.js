@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.addEventListener('click', function() {
         document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
+        console.log('click1');
         
         const amount = this.getAttribute('data-amount');
         

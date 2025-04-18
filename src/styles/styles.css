@@ -1,18 +1,18 @@
 :root {
     /* 🌟 Primary Palette */
-    --primary: #0D6C4F;
-    /* Dark Green - buttons, headers, CTA */
-    --dark: #0A4C34;
-    /* Deep Green - footers, backgrounds */
-    --secondary: #F4C038;
-    /* Golden Yellow - highlights, icons */
+    --primary: #A83A49;
+    /* Warm Red - buttons, headers, CTA */
+    --dark: #800000;
+    /* Deep Maroon - footers, backgrounds */
+    --secondary: #CDAC5F;
+    /* Warm Gold - highlights, icons */
 
     /* 🌿 Secondary Palette */
-    --success: #D4E7D6;
-    /* Light Green - soft backgrounds */
+    --success: #FFF5E3;
+    /* Soft Cream - soft backgrounds, success messages */
     --info: #C3A078;
     /* Soft Brown - overlays, accents */
-    --light: #F9F6F0;
+    --light: #FFF9F5;
     /* Light Beige - cards, sections */
 
     /* 🖤 Grayscale */
@@ -23,13 +23,14 @@
     --gray-900: #333333;
     /* Dark Gray - titles, body text */
     --white: #FFFFFF;
+
+    /* Layout Vars */
     --nav-height: 60px;
     --nav-icon-size: 24px;
-
-    /* White - base or text on dark */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
 
 * {
     margin: 0;
@@ -94,6 +95,7 @@
 .nav-link {
     position: relative;
     padding-bottom: 0.25rem;
+    /* color:var(--white) */
 }
 
 .nav-link::after {
