@@ -1,42 +1,105 @@
 /* component css */
 .modern-card {
-    width: 270px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    background-color: #ffffff;
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
+  width: 270px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+}
+
+.modern-card .icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.modern-card .icon-wrapper img {
+  width: 36px;
+  height: auto;
+}
+
+.modern-card h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.modern-card p {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+/* our volunteers */
+/* our volunteers */
+.our-volunteers-section {
+  position: relative;
+}
+
+.btn-nav {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.btn-nav:hover {
+  opacity: 1;
+}
+
+.scroll-box {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+.scroll-box::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+.volunteer-card {
+  width: 280px;
+}
+
+.user-picture {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 3px solid #e9ecef;
+}
+
+.social-links a {
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .volunteer-card {
+    width: 240px;
   }
 
-  .modern-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .modern-card .icon-wrapper {
-    width: 64px;
-    height: 64px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-
-  .modern-card .icon-wrapper img {
+  .btn-nav {
     width: 36px;
-    height: auto;
+    height: 36px;
+    font-size: 0.9rem;
   }
-
-  .modern-card h5 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .modern-card p {
-    font-size: 0.95rem;
-    color: #6c757d;
-  }
-  
+}

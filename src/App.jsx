@@ -6,15 +6,16 @@ import JoinUs from './pages/JoinUs'
 import DonateUs from './pages/Donate'
 import Contact from './pages/Contact'
 import OurWork from './pages/Work'
-import Navbar from './components/sections/NavBar'
-// import Donation from '../test/index'
+import Navbar from './components/NavBar'
+import Donation from '../test/index'
 function App() {
 
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<>
+          <Navbar/><About /></>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<>
         <Navbar/><DonateUs /></>} />

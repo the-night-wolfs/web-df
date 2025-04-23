@@ -1,46 +1,41 @@
-// 🎨 Primary Color Palette Adapted for Durga Foundation Theme
-$primary: #A83A49;       // Warm red — buttons, links, CTA
-$dark: #800000;          // Deep maroon — navbar, footer
-$secondary: #F4C038;     // Warm gold — highlights, icons, hover effects
+// Primary Color Palette Adapted from Durga Foundation
+$primary: #A83A49; // Warm red — primary buttons, links, CTA
+$dark: #800000 ; // Deep maroon — navbars, footers
+$secondary: #CDAC5F; // Warm gold — highlights, icons, accents
 
-// 🌱 Supporting & Feedback Colors
-$success: #FFF5E3;       // Cream — background highlights, success
-$info: #C3A078;          // Soft brown — overlays, cards, neutral accents
-$light: #FFF9F5;         // Very light beige — base card background
+// Supporting & Feedback Colors
+$success: #FFF5E3; // Soft cream — background highlights, success messages
+$info: #C3A078; // Soft brown — overlays or neutral highlights
+$light: #FFF9F5; // Very light beige — for cards or subtle backgrounds
 
-// 🖤 Grayscale Palette for Texts & Borders
-$gray-100: #EDEDED;      // Light border/card outline
-$gray-700: #777777;      // Muted UI text
-$gray-900: #212529;      // Main body text
+// Grays for Text and Borders
+$gray-100: #EDEDED;
+$gray-700: #777777;
+$gray-900: #333333;
 
-// 🌐 Base Layout & Typography
+// Body & Typography Defaults
 $body-bg: $light;
 $body-color: $gray-900;
 $link-color: $primary;
 $link-hover-color: darken($primary, 10%);
+
+// Typography
 $font-family-base: 'Segoe UI', sans-serif;
 $font-size-base: 1rem;
 $line-height-base: 1.5;
 
-// 🔘 Buttons & Cards
+// Buttons & Cards
 $btn-border-radius: 0.375rem;
 $card-bg: $light;
 $card-border-color: $gray-100;
-
-// 🔗 Navigation
-$nav-link-color: #FFFFFF;            // White nav links on maroon
-$nav-link-hover-color: $secondary;   // Gold hover
-$navbar-dark-color: $nav-link-color;
-$navbar-dark-hover-color: $nav-link-hover-color;
-$navbar-dark-active-color: $secondary;
-$navbar-dark-bg: $dark;
-
-// 📐 Spacing & Grid
+$nav-link-color: #FFFFFF;
+$nav-link-hover-color:$secondary;
+// Spacing & Layout
 $spacer: 1rem;
 $grid-gutter-width: 1.5rem;
 $carousel-indicator-active-bg: $primary;
 
-// 📱 Responsive Breakpoints
+// Responsive Breakpoints
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -50,10 +45,10 @@ $grid-breakpoints: (
   xxl: 1400px
 );
 
-// 🎨 Utility Class Example
+// Utility Class Example
 .bg-gray {
   background: $gray-700;
 }
 
-// 👇 Bootstrap Import — always last
+// Bootstrap Import (last line)
 @import "../../node_modules/bootstrap/scss/bootstrap";

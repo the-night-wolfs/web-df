@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us | Dugra Foundation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #3949ab;
+            --secondary-color: #1e3a8a;
+            --accent-color: #5e72e4;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            bottom: -70px;
+            left: -70px;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .center-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .mission-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .mission-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: rgba(94, 114, 228, 0.1);
+            color: var(--accent-color);
+            font-size: 32px;
+        }
+
+        .team-member {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-img {
+            transition: all 0.4s ease;
+        }
+
+        .team-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            transition: all 0.4s ease;
+        }
+
+        .team-member:hover .team-img {
+            transform: scale(1.05);
+        }
+
+        .team-member:hover .team-info {
+            padding-bottom: 30px;
+        }
+
+        .team-social {
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .team-member:hover .team-social {
+            opacity: 1;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            background-color: var(--accent-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border: 3px solid var(--accent-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -9px;
+        }
+
+        .right::after {
+            left: -9px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .stats-box {
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stats-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .testimonial-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            border: 5px solid rgba(94, 114, 228, 0.1);
+        }
+
+        .quote-icon {
+            font-size: 24px;
+            color: var(--accent-color);
+            opacity: 0.3;
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            top: -50px;
+            left: -50px;
+        }
+
+        .cta-btn {
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            max-height: 60px;
+            margin: 0 auto;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(94, 114, 228, 0.1);
+            color: var(--accent-color);
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(94, 114, 228, 0.1);
+            color: var(--accent-color);
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Responsive fixes */
+        @media (max-width: 767px) {
+            .timeline::before {
+                left: 40px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 31px;
+            }
+
+            .right {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation would go here -->
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4">About Dugra Foundation</h1>
+                    <p class="lead mb-4">We are dedicated to creating positive change through education, healthcare, and
+                        environmental sustainability initiatives.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#our-mission" class="btn btn-light fw-semibold">Our Mission</a>
+                        <a href="#contact" class="btn btn-outline-light">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/800/450" alt="Dugra Foundation Team" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-5 py-md-7" id="our-mission">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold mb-3" data-aos="fade-up">Our Mission & Vision</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">We believe in creating sustainable
+                        change through empowerment, education, and community engagement. Our approach focuses on
+                        long-term solutions rather than temporary fixes.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="mission-card p-4 text-center">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Our Mission</h4>
+                        <p class="text-muted">To empower underprivileged communities through education, healthcare, and
+                            sustainable development programs.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-card p-4 text-center">
+                        <div class="mission-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Our Vision</h4>
+                        <p class="text-muted">A world where every individual has equal opportunity to thrive regardless
+                            of their socioeconomic background.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-card p-4 text-center">
+                        <div class="mission-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Our Values</h4>
+                        <p class="text-muted">Integrity, compassion, accountability, innovation, and respect are the
+                            core values that guide everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-5 py-md-7 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h2 class="fw-bold section-title" data-aos="fade-right">Our Programs</h2>
+                    <p class="text-muted mb-4" data-aos="fade-right" data-aos-delay="100">We run various initiatives
+                        that create meaningful impact in communities across the country.</p>
+                    <a href="#" class="btn btn-primary rounded-pill px-4" data-aos="fade-right"
+                        data-aos-delay="200">View All Programs</a>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6" data-aos="zoom-in">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="/api/placeholder/400/250" alt="Education Program" class="card-img-top">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge bg-primary rounded-pill px-3 py-2">Education</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold">Education for All</h4>
+                                    <p class="card-text text-muted">Providing free education and resources to
+                                        underprivileged children in rural areas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="/api/placeholder/400/250" alt="Healthcare Program" class="card-img-top">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge bg-info rounded-pill px-3 py-2">Healthcare</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold">Healthcare Access</h4>
+                                    <p class="card-text text-muted">Medical camps, health awareness drives, and
+                                        emergency assistance programs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="/api/placeholder/400/250" alt="Environment Program" class="card-img-top">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge bg-success rounded-pill px-3 py-2">Environment</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold">Green Earth</h4>
+                                    <p class="card-text text-muted">Tree plantation drives, clean water campaigns, and
+                                        climate education.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="/api/placeholder/400/250" alt="Women Empowerment Program"
+                                        class="card-img-top">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge bg-danger rounded-pill px-3 py-2">Empowerment</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold">Women Empowerment</h4>
+                                    <p class="card-text text-muted">Skill development, entrepreneurship support, and
+                                        advocacy for women's rights.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 py-md-7">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold mb-3" data-aos="fade-up">Our Leadership Team</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Meet the dedicated individuals working
+                        tirelessly to make a difference.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="team-member">
+                        <img src="/api/placeholder/400/500" alt="Team Member" class="img-fluid team-img">
+                        <div class="team-info">
+                            <h5 class="fw-bold mb-1">Priya Sharma</h5>
+                            <p class="small mb-3">Founder & CEO</p>
+                            <div class="team-social">
+                                <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member">
+                        <img src="/api/placeholder/400/500" alt="Team Member" class="img-fluid team-img">
+                        <div class="team-info">
+                            <h5 class="fw-bold mb-1">Rahul Kapoor</h5>
+                            <p class="small mb-3">Program Director</p>
+                            <div class="team-social">
+                                <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member">
+                        <img src="/api/placeholder/400/500" alt="Team Member" class="img-fluid team-img">
+                        <div class="team-info">
+                            <h5 class="fw-bold mb-1">Ananya Patel</h5>
+                            <p class="small mb-3">Operations Head</p>
+                            <div class="team-social">
+                                <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member">
+                        <img src="/api/placeholder/400/500" alt="Team Member" class="img-fluid team-img">
+                        <div class="team-info">
+                            <h5 class="fw-bold mb-1">Vikram Singh</h5>
+                            <p class="small mb-3">Finance Director</p>
+                            <div class="team-social">
+                                <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-5 py-md-7 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold mb-3" data-aos="fade-up">Our Journey</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">From humble beginnings to where we are
+                        today, our journey has been one of perseverance and dedication.</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2012</span>
+                        <h5 class="fw-bold mt-2">The Beginning</h5>
+                        <p class="text-muted">Founded as a small initiative to provide educational support to 50
+                            children in a local village.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2015</span>
+                        <h5 class="fw-bold mt-2">Expanding Horizons</h5>
+                        <p class="text-muted">Expanded to 10 villages and added healthcare initiatives to our portfolio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h5 class="fw-bold mt-2">Registered NGO</h5>
+                        <p class="text-muted">Officially registered as a non-profit organization with a dedicated team
+                            of 25 members.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h5 class="fw-bold mt-2">Going National</h5>
+                        <p class="text-muted">Expanded our operations to 5 states with over 100 volunteers.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h5 class="fw-bold mt-2">Today</h5>
+                        <p class="text-muted">Operating in 12 states with over 50 programs and impacting more than
+                            100,000 lives annually.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-5 py-md-7">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold mb-3" data-aos="fade-up">Our Impact</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">We measure our success not by numbers,
+                        but by lives transformed and communities empowered.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="stats-box text-center">
+                        <i class="fas fa-graduation-cap fs-1 text-primary mb-3"></i>
+                        <div class="counter" data-count="20000">0</div>
+                        <p class="text-muted">Children Educated</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stats-box text-center">
+                        <i class="fas fa-heartbeat fs-1 text-primary mb-3"></i>
+                        <div class="counter" data-count="50000">0</div>
+                        <p class="text-muted">Medical Checkups</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stats-box text-center">
+                        <i class="fas fa-tree fs-1 text-primary mb-3"></i>
+                        <div class="counter" data-count="100000">0</div>
+                        <p class="text-muted">Trees Planted</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stats-box text-center">
+                        <i class="fas fa-hands-helping fs-1 text-primary mb-3"></i>
+                        <div class="counter" data-count="5000">0</div>
+                        <p class="text-muted">Volunteers Engaged</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 py-md-7 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold mb-3" data-aos="fade-up">What People Say</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Hear from those whose lives have been
+                        touched by our work.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="text-center">
+                            <img src="/api/placeholder/200/200" alt="Testimonial" class="testimonial-img">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <p class="fst-italic text-muted mb-3">"The education program has changed my daughter's life. She
+                            now dreams of becoming a doctor and helping our village."</p>
+                        <h5 class="fw-bold mb-1">Meena Devi</h5>
+                        <p class="small text-muted">Parent, Rajasthan</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="text-center">
+                            <img src="/api/placeholder/200/200" alt="Testimonial" class="testimonial-img">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <p class="fst-italic text-muted mb-3">"Volunteering with Dugra Foundation has been an
+                            eye-opening experience. The team's dedication is truly inspiring."</p>
+                        <h5 class="fw-bold mb-1">Rohan Mehta</h5>
+                        <p class="small text-muted">Volunteer, Delhi</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="text-center">
+                            <img src="/api/placeholder/200/200" alt="Testimonial" class="testimonial-img">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <p class="fst-italic text-muted mb-3">"The healthcare camp organized by Dugra Foundation
+                            provided critical medical care that was otherwise inaccessible to our community."</p>
+                        <h5 class="fw-bold mb-1">Arun Kumar</h5>
+                        <p class="small text-muted">Village Head, Bihar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-5 py-md-7">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold mb-3" data-aos="fade-up">Our Partners</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">We collaborate with various
+                        organizations to maximize our impact and reach.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center g-5">
+                <div class="col-6 col-md-3 text-center" data-aos="fade-up">
+                    <img src="/api/placeholder/150/60" alt="Partner Logo" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/api/placeholder/150/60" alt="Partner Logo" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/api/placeholder/150/60" alt="Partner Logo" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/api/placeholder/150/60" alt="Partner Logo" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <img src="/api/placeholder/150/60" alt="Partner Logo" class="partner-logo">
+                </div>
+                <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="500">
+                    <img src="/api/placeholder/150/60" alt="Partner Logo" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 py-md-7 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold mb-3" data-aos="fade-up">Frequently Asked Questions</h2>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Find answers to common questions about
+                        our work and how you can get involved.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 shadow-sm rounded mb-3" data-aos="fade-up">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button rounded" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How can I volunteer with Dugra Foundation?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can volunteer with us by filling out the volunteer form on our website. We have
+                                    various volunteering opportunities ranging from short-term to long-term commitments,
+                                    both in-person and remote options are available.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 shadow-sm rounded mb-3" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    How are donations utilized by the foundation?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We ensure that at least 85% of all donations go directly to our programs. The
+                                    remaining 15% is used for administrative costs, fundraising efforts, and maintaining
+                                    our operations. We publish detailed financial reports annually for complete
+                                    transparency.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 shadow-sm rounded mb-3" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Can I specify which program I want my donation to support?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, absolutely! When making a donation, you can specify which program you would
+                                    like to support. If you don't specify, your donation will be allocated to where it's
+                                    needed most.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 shadow-sm rounded" data-aos="fade-up" data-aos-delay="300">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    Does the foundation provide tax receipts for donations?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we provide tax receipts for all donations. Donations to Dugra Foundation are
+                                    tax-deductible as allowed by law. You will receive a receipt via email shortly after
+                                    your donation is processed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 py-md-7" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="fw-bold section-title">Get in Touch</h2>
+                    <p class="text-muted mb-4">Have questions or want to collaborate? Reach out to us.</p>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Our Location</h5>
+                            <p class="text-muted">123 NGO Street, New Delhi, 110001, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Email Us</h5>
+                            <p class="text-muted">info@dugrafoundation.org</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Call Us</h5>
+                            <p class="text-muted">+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="fw-bold mb-3">Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="card border-0 shadow-lg rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h4 class="fw-bold mb-4">Send us a message</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Your Name">
+                                            <label for="nameInput">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="emailInput"
+                                                placeholder="Your Email">
+                                            <label for="emailInput">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="subjectInput"
+                                                placeholder="Subject">
+                                            <label for="subjectInput">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="messageInput" placeholder="Your Message"
+                                                style="height: 150px"></textarea>
+                                            <label for="messageInput">Your Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary rounded-pill px-4 py-3 w-100">Send
+                                            Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h4 class="fw-bold mb-3">Subscribe to our newsletter</h4>
+                    <p class="text-muted mb-4">Stay updated with our latest news, events and impact stories.</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="newsletterEmail" placeholder="Your Email">
+                                <label for="newsletterEmail">Your Email Address</label>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <button type="submit" class="btn btn-primary h-100 rounded-pill px-4">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section text-white text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="zoom-in">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Make a Difference?</h2>
+                    <p class="lead mb-5">Join us in our mission to create a better world for all. Every contribution,
+                        big or small, helps us make a difference.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#" class="btn btn-light cta-btn">Donate Now</a>
+                        <a href="#" class="btn btn-outline-light cta-btn">Become a Volunteer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer would go here -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            const duration = 2000; // Animation duration in milliseconds
+            const step = target / (duration / 16); // 60fps
+
+            let current = 0;
+            const updateCounter = () => {
+                current += step;
+                counter.innerText = Math.round(current);
+
+                if (current < target) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            // Start animation when element comes into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCounter();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(counter);
+        });
+
+        // Form validation
+        const forms = document.querySelectorAll('form');
+
+        forms.forEach(form => {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Simple form validation
+                let valid = true;
+                const inputs = form.querySelectorAll('input, textarea');
+
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('is-invalid');
+                        valid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+
+                    // Email validation
+                    if (input.type === 'email' && input.value) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(input.value)) {
+                            input.classList.add('is-invalid');
+                            valid = false;
+                        }
+                    }
+                });
+
+                if (valid) {
+                    // Show success message (in a real application you would submit the form)
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'alert alert-success mt-3';
+                    successMessage.innerText = 'Thank you for your message! We will get back to you soon.';
+                    form.appendChild(successMessage);
+
+                    // Reset form
+                    form.reset();
+                    inputs.forEach(input => {
+                        input.classList.remove('is-valid');
+                    });
+
+                    // Remove message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 5000);
+                }
+            });
+
+            // Remove validation styling on input
+            const inputs = form.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.classList.remove('is-invalid');
+                });
+            });
+        });
+        
+    </script>
+</body>
+
+</html>
