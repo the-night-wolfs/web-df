@@ -1,0 +1,251 @@
+{
+  "events": [
+    {
+      "date": "June 15, 2023",
+      "title": "Community Charity Run",
+      "description": "Join us for our annual 5K charity run through downtown. All proceeds will benefit local schools and education initiatives.",
+      "details": [
+        "7:00 AM - 11:00 AM",
+        "Central Park, Main Street",
+        "500+ Participants Expected"
+      ],
+      "button": {
+        "text": "Register Now",
+        "url": "/events/community-charity-run",
+        "target": "_self"
+      },
+      "metadata": {
+        "createdAt": "2023-05-01T08:00:00Z",
+        "updatedAt": "2023-05-15T10:30:00Z"
+      }
+    },
+    {
+      "date": "July 8-10, 2023",
+      "title": "Summer Food Drive",
+      "description": "Our three-day food collection event to support local food banks during the summer months when donations are typically low.",
+      "details": [
+        "9:00 AM - 5:00 PM Daily",
+        "City Community Center",
+        "Most Needed: Canned Goods & Dry Pasta"
+      ],
+      "button": {
+        "text": "Volunteer Signup",
+        "url": "/events/summer-food-drive",
+        "target": "_self"
+      },
+      "metadata": {
+        "createdAt": "2023-04-15T09:00:00Z",
+        "updatedAt": "2023-06-20T14:15:00Z"
+      }
+    },
+    {
+      "date": "August 22, 2023",
+      "title": "Youth Education Workshop",
+      "description": "A full-day workshop for underprivileged youth featuring STEM activities, career guidance, and mentorship opportunities.",
+      "details": [
+        "10:00 AM - 4:00 PM",
+        "University Tech Building",
+        "For Students Ages 12-18"
+      ],
+      "button": {
+        "text": "Apply Now",
+        "url": "/events/youth-education-workshop",
+        "target": "_self"
+      },
+      "metadata": {
+        "createdAt": "2023-03-10T11:00:00Z",
+        "updatedAt": "2023-07-05T16:45:00Z"
+      }
+    }
+  ],
+  "ourprograms": [
+    {
+      "title": "What We've Done",
+      "image": {
+        "src": "assets/images/premium_photo-1682125773446-259ce64f9dd7.avif",
+        "alt": "Descriptive Alt Text"
+      },
+      "paragraphs": [
+        "Integrating visuals with corresponding text enhances user engagement and comprehension. Proper alignment and placement of images alongside text create a cohesive and aesthetically pleasing layout.",
+        "Consistent margins and thoughtful use of white space contribute to a clean design, guiding readers through the content seamlessly."
+      ],
+      "button": {
+        "text": "Learn More",
+        "link": "#",
+        "showButton": true
+      }
+    },
+    {
+      "title": "Our Achievements",
+      "image": {
+        "src": "assets/images/premium_photo-1682125773446-259ce64f9dd7.avif",
+        "alt": "Descriptive Alt Text"
+      },
+      "paragraphs": [
+        "Visual storytelling combined with compelling text creates memorable experiences. Strategic image placement enhances message retention and user engagement.",
+        "Careful attention to spacing and layout ensures content flows naturally, improving readability and user satisfaction."
+      ],
+      "button": {
+        "text": "View Details",
+        "link": "#",
+        "showButton": true
+      }
+    },
+    {
+      "title": "Recent Projects",
+      "image": {
+        "src": "assets/images/premium_photo-1682125773446-259ce64f9dd7.avif",
+        "alt": "Descriptive Alt Text"
+      },
+      "paragraphs": [
+        "Combining powerful imagery with well-crafted text delivers impactful messages. Balanced compositions create professional, trustworthy presentations.",
+        "White space and consistent margins establish visual hierarchy, making content more accessible and easier to navigate."
+      ],
+      "button": {
+        "text": "See Projects",
+        "link": "#",
+        "showButton": false
+      }
+    }
+  ],
+  "ourmission": [
+    {
+      "heading": "Education for All",
+      "description": "We believe education is a fundamental right. Our programs provide learning opportunities and resources to underserved communities, helping children build a brighter future.",
+      "icon": "fa-book-open",
+      "btnCont": "Learn More",
+      "btnLink": "#"
+    },
+    {
+      "heading": "Health Care",
+      "description": "Our healthcare initiatives include medical camps, health awareness drives, and emergency assistance programs to ensure everyone has access to basic healthcare",
+      "icon": "fa-heartbeat",
+      "btnCont": "Learn More",
+      "btnLink": "#"
+    },
+    {
+      "heading": "Green Earth",
+      "description": "Through tree plantation drives, clean water campaigns, and climate education, we work to protect the environment for future generations.",
+      "icon": "fa-leaf",
+      "btnCont": "Learn More",
+      "btnLink": "#"
+    }
+  ],
+  "ourvalues": [
+    {
+      "heading": "Integrity",
+      "description": "We uphold the highest ethical standards in all our actions and decisions.",
+      "icon": "fa-handshake"
+    },
+    {
+      "heading": "Compassion",
+      "description": "Every initiative stems from genuine care for people and the planet.",
+      "icon": "fa-heart"
+    },
+    {
+      "heading": "Inclusivity",
+      "description": "We embrace diversity and ensure our programs reach all communities.",
+      "icon": "fa-users"
+    },
+    {
+      "heading": "Sustainability",
+      "description": "Creating long-term solutions that empower communities to thrive.",
+      "icon": "fa-seedling"
+    }
+  ],
+  "ourimpact": [
+    {
+      "work": "Student Educated",
+      "targetNumber": "5000",
+      "icon": "fa-user-graduate"
+    },
+    {
+      "work": "Healthcare Beneficiaries",
+      "targetNumber": "8750",
+      "icon": "fa-heartbeat"
+    },
+    {
+      "work": "Trees Planted",
+      "targetNumber": "15000",
+      "icon": "fa-tree"
+    },
+    {
+      "work": "Communities Served",
+      "targetNumber": "120",
+      "icon": "fa-home"
+    }
+  ],
+  "ourjourney": [
+    {
+      "year": "2012",
+      "title": "The Beginning",
+      "description": "Founded as a small initiative to provide educational support to 50 children in a local village."
+    },
+    {
+      "year": "2015",
+      "title": "Expanding Horizons",
+      "description": "Expanded to 10 villages and added healthcare initiatives to our portfolio."
+    },
+    {
+      "year": "2018",
+      "title": "Registered NGO",
+      "description": "Officially registered as a non-profit organization with a dedicated team of 25 members."
+    },
+    {
+      "year": "2020",
+      "title": "Going National",
+      "description": "Expanded our operations to 5 states with over 100 volunteers."
+    },
+    {
+      "year": "2024",
+      "title": "Today",
+      "description": "Operating in 12 states with over 50 programs and impacting more than 100,000 lives annually."
+    }
+  ],
+  "volunteers": [
+    {
+      "name": "Sarah Johnson",
+      "role": "Community Coordinator",
+      "bio": "Passionate about education and youth development programs.",
+      "social": ["twitter", "linkedin", "instagram"],
+      "image": "https://randomuser.me/api/portraits/women/43.jpg"
+    },
+    {
+      "name": "Michael Chen",
+      "role": "Event Organizer",
+      "bio": "Specializes in fundraising and community engagement events.",
+      "social": ["twitter", "linkedin"],
+      "image": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "name": "Priya Patel",
+      "role": "Outreach Specialist",
+      "bio": "Connects with local businesses for partnerships and sponsorships.",
+      "social": ["facebook", "instagram"],
+      "image": "https://randomuser.me/api/portraits/women/65.jpg"
+    },
+    {
+      "name": "David Wilson",
+      "role": "Volunteer Trainer",
+      "bio": "Develops training programs for new volunteers and team leaders.",
+      "social": ["linkedin", "twitter"],
+      "image": "https://randomuser.me/api/portraits/men/75.jpg"
+    },
+    {
+      "name": "Emma Rodriguez",
+      "role": "Social Media Manager",
+      "bio": "Shares our stories and impacts through digital platforms.",
+      "social": ["instagram", "twitter"],
+      "image": "https://randomuser.me/api/portraits/women/33.jpg"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2023-08-01T12:00:00Z",
+    "security": {
+      "allowedOrigins": ["https://yourdomain.com"],
+      "contentTypes": ["application/json"],
+      "cacheControl": "max-age=3600"
+    }
+  }
+}

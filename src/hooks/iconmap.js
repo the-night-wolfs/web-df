@@ -1,0 +1,41 @@
+// iconMap.js
+import {
+  faCoffee,
+  faHeart,
+  faHandshake,
+  faUser,
+  faSeedling,
+  faAngleRight,
+  faAngleLeft,
+  faBars,
+  faXmark,
+  faPaperPlane,
+  faHandHoldingHeart,
+  faArrowDown,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+export const iconMap = {
+  coffee: faCoffee,
+  heart: faHeart,
+  handshake: faHandshake,
+  user: faUser,
+  seedling: faSeedling,
+  rightMove: faAngleRight,
+  leftMove: faAngleLeft,
+  bar: faBars,
+  xmark: faXmark,
+  twitter: faTwitter,
+  facebook: faFacebook,
+  instagram: faInstagram,
+  linkedin: faLinkedin,
+  github: faGithub,
+  paperplane: faPaperPlane,
+  HeartInHand: faHandHoldingHeart,
+  arrowdown: faArrowDown,
+};
