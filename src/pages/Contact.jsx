@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import React from "react";
-import "../styles/contact.css";
+// import "../styles/contact.css";
 import FAQ from "../components/ui/FAQ";
-import Data from "../data/StaticContent/faqs.json";
+// import Data from "/data/StaticContent/faqs.json";
 import BackToTop from "../components/ui/BacktoTop";
 function Contact() {
   const copyToClipboard = (text) => {

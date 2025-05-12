@@ -1,7 +1,6 @@
-import { useEffect, useState, createContext } from "react";
-
+import { useEffect, useState } from "react";
+import { createContext } from "react";
 export const ContentContext = createContext(null);
-
 export const ContentProvider = ({ children }) => {
   const [state, setState] = useState({
     loading: true,
@@ -13,8 +12,8 @@ export const ContentProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const [responseDynamic, responseStatic] = await Promise.all([
-          fetch("../src/data/DynamicContent/DynamicContent.json"),
-          fetch("../src/data/StaticContent/StaticContent.json"),
+          fetch(`/data/DynamicContent/DynamicContent.json?t=${Date.now()}`),
+          fetch(`/data/StaticContent/StaticContent.json?t=${Date.now()}`),
         ]);
 
         if (!responseStatic.ok || !responseDynamic.ok) {

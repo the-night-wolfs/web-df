@@ -5,5 +5,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist' // ✅ Netlify looks for this
-  }
+  },
+    force: true // Disable caching during development
 })

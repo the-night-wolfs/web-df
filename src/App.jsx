@@ -7,7 +7,7 @@ import DonateUs from "./pages/Donate";
 import Contact from "./pages/Contact";
 import OurWork from "./pages/Work";
 import Navbar from "./components/ui/NavBar";
-import Donation from "../test/check";
+// import Donation from "../test/index"
 import Footer from "./components/ui/Footer";
 import Layout from "./Layout";
 import AOS from "aos";
@@ -47,8 +47,6 @@ function App() {
       </Routes>
     </>
   );
+  // return <Donation />;
 }
-// function App() {
-//   return <Layout page={"about"} />;
-// }
 export default App;

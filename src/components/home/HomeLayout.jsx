@@ -13,14 +13,14 @@ const HomeLayout = () => {
   const { content, loading, error } = state;
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-  // console.log(content.dynamicContent);I
+  console.log(content.staticContent);
   const contentFlow = {
-    ourwork: content.staticContent.textmedia,
-    ourvalues: content.staticContent.ourvalues,
-    ourstory: content.staticContent.textmedia,
-    volunteers: content.dynamicContent.volunteers,
-    ourprograms: content.dynamicContent.ourprograms,
-    events: content.dynamicContent.events,
+    ourwork: content?.staticContent?.["textmedia-global"]?.["ourImpact-home"],
+    ourvalues: content?.staticContent?.ourvalues,
+    ourstory: content?.staticContent?.["textmedia-global"]?.["aboutUs-home"],
+    volunteers: content?.dynamicContent?.volunteers,
+    ourprograms: content?.dynamicContent?.ourprograms,
+    events: content?.dynamicContent?.events,
   };
   return (
     <section className="main-sec conatiner-fluid">

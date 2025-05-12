@@ -3,6 +3,8 @@
   /* Color Palette */
   --primary: #a83a49;
   --primary-dark: #800000;
+  --primary-rgb: 168, 58, 73;
+  --primary-dark-rgb: 128, 0, 0;
   --secondary: #cdac5f;
   --accent: #c3a078;
   --light: #fff9f5;

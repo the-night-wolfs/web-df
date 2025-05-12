@@ -1,24 +1,24 @@
-import React from "react";
-// import CTA from "../about/sections/CTA";
-// import Hero from "../src/components/about/sections/Hero";
-// import OurImpact from "../src/components/about/sections/OurImpact";
-// import OurJourney from "../src/components/about/sections/OurJourney";
-// import OurMission from "../src/components/about/sections/OurMission";
-// import OurTeam from "../src/components/about/sections/OurTeam";
-// import OurValues from "../src/components/about/sections/OurValue";
-import Footer from "../src/components/ui/Footer";
-import NavBar from "../src/components/ui/NavBar";
-const Layout = ({ children }) => {
+import React, { useEffect } from "react";
+import { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import TextMedia from "../src/components/ui/TextMedia";
+
+const YouthCorner = () => {
+  const stats = ;
+
+  const ;
+  const content = {
+   ,
+  };
+
   return (
-    <>
-      <header>
-        <NavBar />
-        {children.hero == "" ? "" : children.hero}
-      </header>
-      <main>{children.main}</main>
-      <Footer />
-    </>
+    <div className="youth-corner-app">
+      <TextMedia content={content.about} />
+    </div>
   );
 };
 
-export default Layout;
+export default YouthCorner;

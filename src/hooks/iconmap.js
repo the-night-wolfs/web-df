@@ -12,6 +12,13 @@ import {
   faPaperPlane,
   faHandHoldingHeart,
   faArrowDown,
+  faGraduationCap, 
+  faHandsHelping, 
+  faDonate,
+  faUsers,
+  faCheck,
+  faQuoteLeft,
+  faArrowRight
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -38,4 +45,11 @@ export const iconMap = {
   paperplane: faPaperPlane,
   HeartInHand: faHandHoldingHeart,
   arrowdown: faArrowDown,
+  graduationCap: faGraduationCap,
+  handsHelping: faHandsHelping,
+  donate: faDonate,
+  users: faUsers,
+  check: faCheck,
+  quoteLeft: faQuoteLeft,
+  arrowRight: faArrowRight,
 };
