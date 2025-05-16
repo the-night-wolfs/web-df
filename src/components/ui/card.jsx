@@ -6,7 +6,6 @@ const card = ({ content }) => {
     <div className="value-card">
       <div className="value-icon">
         <FontAwesomeIcon icon={iconMap[content.icon.name]} />
-        {console.log(content.icon)}
       </div>
       <h3 className="h5 fw-bold">{content.heading}</h3>
       <p className="text-muted">{content.description}</p>

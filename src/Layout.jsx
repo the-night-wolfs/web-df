@@ -1,22 +1,30 @@
 import React from "react";
-import AboutHero from "./components/about/sections/Hero";
-import HomeHero from "./components/home/sections/Hero";
-import AboutLayout from "./components/about/AboutLayout";
-import HomeLayout from "./components/home/HomeLayout";
 import NavBar from "./components/ui/NavBar";
 import Footer from "./components/ui/Footer";
-import JoinUsLayout from "./components/joinus/JoinUsLayout";
-import JoinUsHero from "./components/joinus/sections/Hero";
+import { useContent } from "./hooks/useContent";
+import AboutHero from "./pages/about/sections/Hero";
+import HomeHero from "./pages/home/sections/Hero";
+import AboutLayout from "./pages/about/AboutLayout";
+import HomeLayout from "./pages/home/HomeLayout";
+import YouthLayout from "./pages/youthcorner/YouthLayout";
+import YouthHero from "./pages/youthcorner/sections/Hero";
+import DonateLayout from "./pages/donate/DonateLayout";
+import ContactLayout from "./pages/contact/ContactLayout";
+import ContactHero from "./pages/contact/sections/Hero";
 const Layout = ({ page }) => {
+  const { state } = useContent();
   const pages = {
-    about: <AboutLayout />,
-    home: <HomeLayout />,
-    joinUs: <JoinUsLayout />,
+    about: <AboutLayout state={state} />,
+    home: <HomeLayout state={state} />,
+    youthcorner: <YouthLayout state={state} />,
+    donate: <DonateLayout />,
+    contact: <ContactLayout />,
   };
   const heroes = {
     about: <AboutHero />,
     home: <HomeHero />,
-    joinUs: <JoinUsHero />,
+    youthcorner: <YouthHero />,
+    contact: <ContactHero />,
   };
   return (
     <>

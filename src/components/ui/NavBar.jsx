@@ -63,11 +63,11 @@ const NavBar = () => {
               isTablet ? "tablet-menu" : ""
             }`}
           >
-            {["home", "about", "work", "events", "team", "blog", "contact"].map(
+            {["home", "about", "programs", "youth Corner", "contact"].map(
               (item) => (
                 <NavLink
                   key={item}
-                  to={item === "home" ? "/" : `/${item}`}
+                  to={item === "home" ? "/" : `/${item.replace(" ", "")}`}
                   className={navLinkClass}
                   onClick={closeNavbar}
                 >

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
+import React from "react";
 export const ContentContext = createContext(null);
 export const ContentProvider = ({ children }) => {
   const [state, setState] = useState({
@@ -17,7 +18,7 @@ export const ContentProvider = ({ children }) => {
         ]);
 
         if (!responseStatic.ok || !responseDynamic.ok) {
-          throw new Error("There has been an error while fetching data");
+          throw new Error("There has been ann error while fetching data");
         }
 
         const [dynamicData, staticData] = await Promise.all([

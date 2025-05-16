@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import React from "react";
+import { iconMap } from "../../hooks/iconmap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const BackToTop = () => {
   const backToTop = useRef(null);
   window.addEventListener("scroll", () => {
@@ -7,7 +9,7 @@ const BackToTop = () => {
   });
   return (
     <div className="back-to-top" id="backToTop" ref={backToTop}>
-      <i className="fas fa-chevron-up"></i>
+      <FontAwesomeIcon icon={iconMap["arrowup"]} />
     </div>
   );
 };

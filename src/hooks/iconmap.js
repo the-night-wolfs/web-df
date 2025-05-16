@@ -1,4 +1,5 @@
 // iconMap.js
+
 import {
   faCoffee,
   faHeart,
@@ -18,7 +19,11 @@ import {
   faUsers,
   faCheck,
   faQuoteLeft,
-  faArrowRight
+  faArrowRight,
+  faLeaf,
+  faLock,
+  faShield,
+  faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -27,6 +32,7 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const iconMap = {
   coffee: faCoffee,
   heart: faHeart,
@@ -52,4 +58,9 @@ export const iconMap = {
   check: faCheck,
   quoteLeft: faQuoteLeft,
   arrowRight: faArrowRight,
+  leaf:faLeaf,
+  lock:faLock,
+  sheild:faShield,
+  arrowup:faArrowUp,
+  graduationCap:faGraduationCap
 };

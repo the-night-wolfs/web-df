@@ -69,3 +69,13 @@
   background: var(--primary);
   border-radius: var(--radius-sm);
 }
+body {
+  overflow-x: hidden;
+}
+html {
+  overflow-anchor: none;
+}
+.aos-section {
+  overflow-x: clip;
+  position: relative;
+}

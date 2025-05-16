@@ -1,10 +1,9 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { iconMap } from "../../hooks/iconmap";
 
 const TextMedia = ({ content }) => {
-  {
-    console.log(content);
-  }
+  console.log(content);
   return (
     <section id="about" className="py-5">
       <div className="container">
