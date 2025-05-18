@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'aos/dist/aos.css';
+// import AOS from 'aos';
 import ProgramCard from './ProgramCard';
 import './main-script'
 import './ProgramsPage.css';
 const ProgramsPage = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-in-out'
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000,
+  //     once: true,
+  //     easing: 'ease-in-out'
+  //   });
+  // }, []);
 
   const programs = [
     {
