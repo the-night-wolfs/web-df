@@ -13,8 +13,8 @@ import {
   faPaperPlane,
   faHandHoldingHeart,
   faArrowDown,
-  faGraduationCap, 
-  faHandsHelping, 
+  faGraduationCap,
+  faHandsHelping,
   faDonate,
   faUsers,
   faCheck,
@@ -24,6 +24,8 @@ import {
   faLock,
   faShield,
   faArrowUp,
+  faHeartbeat,
+  faVenus,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -58,9 +60,10 @@ export const iconMap = {
   check: faCheck,
   quoteLeft: faQuoteLeft,
   arrowRight: faArrowRight,
-  leaf:faLeaf,
-  lock:faLock,
-  sheild:faShield,
-  arrowup:faArrowUp,
-  graduationCap:faGraduationCap
+  leaf: faLeaf,
+  lock: faLock,
+  sheild: faShield,
+  arrowup: faArrowUp,
+  heartbeat: faHeartbeat,
+  venus: faVenus
 };

@@ -11,6 +11,7 @@ import YouthHero from "./pages/youthcorner/sections/Hero";
 import DonateLayout from "./pages/donate/DonateLayout";
 import ContactLayout from "./pages/contact/ContactLayout";
 import ContactHero from "./pages/contact/sections/Hero";
+import Test from "../tests/Test";
 const Layout = ({ page }) => {
   const { state } = useContent();
   const pages = {
@@ -19,6 +20,7 @@ const Layout = ({ page }) => {
     youthcorner: <YouthLayout state={state} />,
     donate: <DonateLayout />,
     contact: <ContactLayout />,
+    programs: <Test />
   };
   const heroes = {
     about: <AboutHero />,

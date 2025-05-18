@@ -5,6 +5,7 @@ import Layout from "./Layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./styles/globel.css";
+import Test from "../tests/Test";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -24,9 +25,10 @@ function App() {
         <Route path="/donate" element={<Layout page={"donate"} />} />
         <Route path="/contact" element={<Layout page={"contact"} />} />
         <Route path="/youthCorner" element={<Layout page={"youthcorner"} />} />
+        <Route path="/programs" element={<Layout page={"programs"} />} />
       </Routes>
     </>
   );
-  // return <Donation />;
+  // return <Test />;
 }
 export default App;
