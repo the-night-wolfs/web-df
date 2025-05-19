@@ -1,127 +1,61 @@
-import React, { useEffect } from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'aos/dist/aos.css';
-// import AOS from 'aos';
-import ProgramCard from './ProgramCard';
-import './main-script'
-import './ProgramsPage.css';
-const ProgramsPage = () => {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     once: true,
-  //     easing: 'ease-in-out'
-  //   });
-  // }, []);
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import './NotFoundPage.css';
 
-  const programs = [
-    {
-      id: 1,
-      title: "Education Empowerment",
-      description: "Providing quality education to underprivileged children through scholarships, learning materials, and educational infrastructure support.",
-      icon: "graduationCap",
-      image: "https://picsum.photos/400/300",
-      category: "Education"
-    },
-    {
-      id: 2,
-      title: "Healthcare Initiatives",
-      description: "Free health camps, medical support, and awareness programs to promote better health practices in rural communities.",
-      icon: "heartbeat",
-      image: "https://picsum.photos/400/300",
-      category: "Healthcare"
-    },
-    {
-      id: 3,
-      title: "Women Empowerment",
-      description: "Skill development, vocational training, and entrepreneurship programs to help women become financially independent.",
-      icon: "venus",
-      image: "https://picsum.photos/400/300",
-      category: "Empowerment"
-    },
-    {
-      id: 4,
-      title: "Rural Development",
-      description: "Infrastructure development, clean water initiatives, and sustainable farming practices to uplift rural communities.",
-      icon: "home",
-      image: "https://picsum.photos/400/300",
-      category: "Development"
-    },
-    {
-      id: 5,
-      title: "Environmental Conservation",
-      description: "Tree plantation drives, waste management systems, and environmental awareness campaigns for a greener planet.",
-      icon: "tree",
-      image: "https://picsum.photos/400/300",
-      category: "Environment"
-    },
-    {
-      id: 6,
-      title: "Disaster Relief",
-      description: "Immediate support and long-term rehabilitation for communities affected by natural disasters and calamities.",
-      icon: "handsHelping",
-      image: "https://picsum.photos/400/300",
-      category: "Relief"
-    }
-  ];
+const NotFoundPage = () => {
+  const navigate = useNavigate();
 
-  const categories = ["All", "Education", "Healthcare", "Empowerment", "Development", "Environment", "Relief"];
-  const [activeFilter, setActiveFilter] = React.useState("All");
-  const [filteredPrograms, setFilteredPrograms] = React.useState(programs);
-
-  const handleFilterClick = (category) => {
-    setActiveFilter(category);
-    if (category === "All") {
-      setFilteredPrograms(programs);
-    } else {
-      setFilteredPrograms(programs.filter(program => program.category === category));
-    }
-  };
+  useEffect(() => {
+    document.title = "Page Not Found | Your App Name";
+  }, []);
 
   return (
-    <div className="programs-page">
-      <div className="container">
-        <div className="programs-header text-center" data-aos="fade-up">
-          <h1 className="display-4 fw-bold">Our Programs</h1>
-          <div className="header-separator"></div>
-          <p className="lead">Discover the initiatives through which Durga Foundation is creating a positive impact in our communities</p>
-        </div>
-
-        <div className="filter-container" data-aos="fade-up" data-aos-delay="100">
-          <div className="filter-wrap">
-            {categories.map(category => (
-              <button
-                key={category}
-                className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
-                onClick={() => handleFilterClick(category)}
-              >
-                {category}
-              </button>
-            ))}
+    <div className="not-found-container">
+      <div className="not-found-content">
+        <div className="error-graphic">
+          <div className="error-number">
+            <span className="digit">4</span>
+            <span className="digit">0</span>
+            <span className="digit">4</span>
+          </div>
+          <div className="error-illustration">
+            <div className="astronaut">
+              <div className="helmet"></div>
+              <div className="body"></div>
+            </div>
           </div>
         </div>
-
-        <div className="row g-4 programs-container">
-          {filteredPrograms.map((program, index) => (
-            <div
-              className="col-md-6 col-lg-4"
-              key={program.id}
-              data-aos="fade-up"
-              data-aos-delay={100 + (index * 50)}
-            >
-              <ProgramCard program={program} />
-            </div>
-          ))}
+        
+        <h1>Lost in Space?</h1>
+        <p className="subtitle">
+          The page you're looking for doesn't exist or has been moved.
+          <br />
+          Don't worry, we'll help you find your way back!
+        </p>
+        
+        <div className="action-buttons">
+          <button 
+            onClick={() => navigate(-1)} 
+            className="back-button"
+          >
+            ← Go Back
+          </button>
+          <button 
+            onClick={() => navigate('/')} 
+            className="home-button"
+          >
+            Take Me Home
+          </button>
         </div>
-      </div>
-
-      <div className="cta-section text-center" data-aos="fade-up">
-        <div className="container">
-          <h2>Ready to Make a Difference?</h2>
-          <p>Join us in our mission to create a more equitable and sustainable world</p>
-          <div className="cta-buttons">
-            <button className="btn btn-primary">Donate Now</button>
-            <button className="btn btn-outline">Volunteer</button>
+        
+        <div className="search-container">
+          <p>Or try searching:</p>
+          <div className="search-bar">
+            <input 
+              type="text" 
+              placeholder="Search our site..." 
+            />
+            <button className="search-button">Search</button>
           </div>
         </div>
       </div>
@@ -129,4 +63,4 @@ const ProgramsPage = () => {
   );
 };
 
-export default ProgramsPage;
+export default NotFoundPage;

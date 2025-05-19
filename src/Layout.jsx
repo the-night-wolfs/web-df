@@ -12,6 +12,7 @@ import DonateLayout from "./pages/donate/DonateLayout";
 import ContactLayout from "./pages/contact/ContactLayout";
 import ContactHero from "./pages/contact/sections/Hero";
 import ProgramsLayout from "./pages/programs/programsLayout";
+import NotFound from "./components/errors/NotFound";
 const Layout = ({ page }) => {
   const { state } = useContent();
   const pages = {
@@ -34,7 +35,7 @@ const Layout = ({ page }) => {
         <NavBar />
         {heroes[page] || ""}
       </header>
-      <main>{pages[page] || <div>page not found</div>}</main>
+      <main>{pages[page] || <NotFound />}</main>
       <Footer />
     </>
   );
