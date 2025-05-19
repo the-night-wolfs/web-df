@@ -5,7 +5,7 @@ import Layout from "./Layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./styles/globel.css";
-import Test from "../tests/Test";
+// import Test from "../tests/Test";
 function App() {
   useEffect(() => {
     AOS.init({

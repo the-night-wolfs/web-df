@@ -1,6 +1,7 @@
 :root {
   --radius: 20px;
 }
+
 /* Values Grid Container */
 .values-grid {
   display: grid;
@@ -111,6 +112,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 /* Team Identity Card */
 .volunteer-card {
   width: 280px;
@@ -171,6 +173,7 @@
     height: 80px;
   }
 }
+
 /* text content component */
 .or-wrk-wy-box {
   background-color: inherit;
@@ -188,6 +191,7 @@
 .text-container {
   padding: 0 1.5rem;
 }
+
 @media (max-width: 767.98px) {
   .or-wrk-wy-box {
     margin: 1rem 0;
@@ -337,9 +341,11 @@
   .menu-toggle {
     display: block;
   }
+
   .navbar-content {
     flex-direction: row;
   }
+
   .nav-links {
     position: fixed;
     top: 70px;
@@ -353,9 +359,11 @@
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.4s ease;
   }
+
   .nav-links.open {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
   .navbar-container {
     padding: 0 1.5rem;
   }
@@ -365,6 +373,7 @@
     transform: none;
   }
 }
+
 /* footer */
 .footer {
   background-color: var(--primary);
@@ -433,27 +442,38 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
 }
+
 /* whatsapp icon */
 .whatsapp-icon {
   position: sticky;
-  bottom: 20px; /* Adjust the distance from the bottom */
-  right: 20px; /* Adjust the distance from the right */
-  z-index: 1000; /* Ensure it stays above other elements */
+  bottom: 20px;
+  /* Adjust the distance from the bottom */
+  right: 20px;
+  /* Adjust the distance from the right */
+  z-index: 1000;
+  /* Ensure it stays above other elements */
   cursor: pointer;
-  background-color: #25d366; /* WhatsApp green background */
-  border-radius: 50%; /* Make it circular */
-  width: 60px; /* Icon container width */
-  height: 60px; /* Icon container height */
+  background-color: #25d366;
+  /* WhatsApp green background */
+  border-radius: 50%;
+  /* Make it circular */
+  width: 60px;
+  /* Icon container width */
+  height: 60px;
+  /* Icon container height */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .whatsapp-icon:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  /* Enhance shadow on hover */
 }
 
 /* Faqs */
@@ -539,34 +559,31 @@
 .custom-accordion .accordion-button:not(.collapsed) .faq-toggle::after {
   transform: rotate(90deg);
 }
+
 /* back to top */
 .back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 45px;
-  height: 45px;
-  background: var(--primary);
-  color: var(--white);
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 16px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.9);
+  display: none;
+  cursor: pointer;
 }
 
-.back-to-top.active {
+.back-to-top.show {
+  display: block !important;
   opacity: 1;
-  visibility: visible;
+  transform: scale(1);
 }
 
 .back-to-top:hover {
-  background: var(--secondary);
-  transform: translateY(-5px);
+  background-color: var(--primary-dark);
 }

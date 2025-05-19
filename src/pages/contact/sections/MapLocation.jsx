@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { iconMap } from "../../../hooks/iconmap";
 const MapLocation = () => {
   return (
     <section className="py-5 bg-light">
@@ -21,15 +23,15 @@ const MapLocation = () => {
               <div className="map-card">
                 <h4>Our Headquarters</h4>
                 <div className="map-card-item">
-                  <i className="fas fa-map-marker-alt map-card-icon"></i>
+                  <FontAwesomeIcon icon={iconMap["mapMarkerAlt"]} className="map-card-icon"/>
                   <span>123 Business Avenue, NY 10001</span>
                 </div>
                 <div className="map-card-item">
-                  <i className="fas fa-phone-alt map-card-icon"></i>
+                  <FontAwesomeIcon icon={iconMap["phoneAlt"]} className="map-card-icon"/>
                   <span>+1 (555) 123-4567</span>
                 </div>
                 <div className="map-card-item">
-                  <i className="fas fa-envelope map-card-icon"></i>
+                  <FontAwesomeIcon icon={iconMap["envelope"]} className="map-card-icon"/>
                   <span>info@yourbrand.com</span>
                 </div>
               </div>

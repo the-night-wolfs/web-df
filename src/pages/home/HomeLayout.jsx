@@ -7,20 +7,18 @@ import StudentHelp from "./sections/StudentHelp";
 import Donation from "./sections/Donation";
 import UpcomingEvents from "./sections/UpcomingEvents";
 
-const HomeLayout = ({state}) => {
+const HomeLayout = ({ state }) => {
   const { content, loading, error } = state;
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-  console.log(content.staticContent["textmedia-global"]["aboutUs-home"]);
   const contentFlow = {
     ourwork: content.staticContent["textmedia-global"]["ourImpact-home"],
     ourvalues: content?.staticContent?.ourvalues,
     ourstory: content.staticContent["textmedia-global"]["aboutUs-home"],
-    volunteers: content?.dynamicContent?.volunteers,
-    ourprograms: content?.dynamicContent?.ourprograms,
-    events: content?.dynamicContent?.events,
+    volunteers: content?.dynamicContent?.["volunteers-global"],
+    ourprograms: content?.dynamicContent?.["programsOurprograms"],
+    events: content?.dynamicContent?.events
   };
-  // console.log(contentFlow.ourwork);
   return (
     <section className="main-sec conatiner-fluid">
       <main className="main">

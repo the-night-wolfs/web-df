@@ -1,5 +1,7 @@
 import React from "react";
 import TeamIdentity from "../../../components/ui/TeamIdentity";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { iconMap } from "../../../hooks/iconmap";
 const ContactForm = () => {
   const validateForm = (e) => {
     e.preventDefault();
@@ -82,20 +84,21 @@ const ContactForm = () => {
               <h2 className="section-title">Send Us a Message</h2>
 
               <div className="alert alert-success d-none" id="success-message">
-                <i className="fas fa-check-circle alert-icon"></i> Your message
+                <FontAwesomeIcon icon={iconMap["checkCircle"]} className="alert-icon" />
+                Your message
                 has been sent successfully! We'll get back to you soon.
               </div>
 
               <div className="alert alert-danger d-none" id="error-message">
-                <i className="fas fa-exclamation-circle alert-icon"></i> There
-                was an error sending your message. Please try again.
+                <FontAwesomeIcon icon={iconMap["exclamationCircle"]} />
+                There was an error sending your message. Please try again.
               </div>
 
               <form
                 id="contactForm"
                 noValidate
                 onSubmit={validateForm}
-                // onInput={realtimeValidate}
+              // onInput={realtimeValidate}
               >
                 <div className="form-floating">
                   <input
@@ -124,20 +127,19 @@ const ContactForm = () => {
                   </div>
                 </div>
                 <div className="form-floating">
-                  <select className="form-select" id="subject" required>
-                    <option value={""} selected disabled>
+                  <select className="form-select" id="subject" defaultValue="" required>
+                    <option value="" disabled>
                       Select a subject
                     </option>
-                    <option value={"General Inquiry"}>General Inquiry</option>
-                    <option value={"Support"}>Support</option>
-                    <option value={"Feedback"}>Feedback</option>
-                    <option value={"Partnership"}>Partnership</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Support">Support</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Partnership">Partnership</option>
                   </select>
                   <label htmlFor="subject">Subject</label>
-                  <div className="invalid-feedback">
-                    Please select a subject.
-                  </div>
+                  <div className="invalid-feedback">Please select a subject.</div>
                 </div>
+
                 <div className="form-floating">
                   <textarea
                     className="form-control"

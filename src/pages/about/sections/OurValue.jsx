@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { iconMap } from "../../../hooks/iconmap";
 
 const OurValues = ({ content }) => {
   return (
@@ -22,7 +24,7 @@ const OurValues = ({ content }) => {
               >
                 <div className="value-card">
                   <div className="value-icon">
-                    <i className={"fas " + elem.icon}></i>
+                    <FontAwesomeIcon icon={iconMap[elem.icon]}/>
                   </div>
                   <h3 className="h5 fw-bold">{elem.heading}</h3>
                   <p className="text-muted">{elem.description}</p>

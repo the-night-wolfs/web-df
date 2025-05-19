@@ -112,21 +112,21 @@
     {
       "heading": "Education for All",
       "description": "We believe education is a fundamental right. Our programs provide learning opportunities and resources to underserved communities, helping children build a brighter future.",
-      "icon": "fa-book-open",
+      "icon": "bookOpen",
       "btnCont": "Learn More",
       "btnLink": "#"
     },
     {
       "heading": "Health Care",
       "description": "Our healthcare initiatives include medical camps, health awareness drives, and emergency assistance programs to ensure everyone has access to basic healthcare",
-      "icon": "fa-heartbeat",
+      "icon": "heartbeat",
       "btnCont": "Learn More",
       "btnLink": "#"
     },
     {
       "heading": "Green Earth",
       "description": "Through tree plantation drives, clean water campaigns, and climate education, we work to protect the environment for future generations.",
-      "icon": "fa-leaf",
+      "icon": "leaf",
       "btnCont": "Learn More",
       "btnLink": "#"
     }
@@ -135,44 +135,44 @@
     {
       "heading": "Integrity",
       "description": "We uphold the highest ethical standards in all our actions and decisions.",
-      "icon": "fa-handshake"
+      "icon": "handshake"
     },
     {
       "heading": "Compassion",
       "description": "Every initiative stems from genuine care for people and the planet.",
-      "icon": "fa-heart"
+      "icon": "heart"
     },
     {
       "heading": "Inclusivity",
       "description": "We embrace diversity and ensure our programs reach all communities.",
-      "icon": "fa-users"
+      "icon": "users"
     },
     {
       "heading": "Sustainability",
       "description": "Creating long-term solutions that empower communities to thrive.",
-      "icon": "fa-seedling"
+      "icon": "seedling"
     }
   ],
   "ourimpact": [
     {
       "work": "Student Educated",
       "targetNumber": "5000",
-      "icon": "fa-user-graduate"
+      "icon": "userGraduate"
     },
     {
       "work": "Healthcare Beneficiaries",
       "targetNumber": "8750",
-      "icon": "fa-heartbeat"
+      "icon": "heartbeat"
     },
     {
       "work": "Trees Planted",
       "targetNumber": "15000",
-      "icon": "fa-tree"
+      "icon": "tree"
     },
     {
       "work": "Communities Served",
       "targetNumber": "120",
-      "icon": "fa-home"
+      "icon": "home"
     }
   ],
   "ourjourney": [

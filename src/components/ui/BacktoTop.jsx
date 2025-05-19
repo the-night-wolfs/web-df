@@ -1,14 +1,29 @@
-import { useRef } from "react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { iconMap } from "../../hooks/iconmap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const BackToTop = () => {
-  const backToTop = useRef(null);
-  window.addEventListener("scroll", () => {
-    backToTop.current.classList.toggle("active", window.scrollY > 200);
-  });
+  const [showButton, setShowButton] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.pageYOffset > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleBackToTopClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <div className="back-to-top" id="backToTop" ref={backToTop}>
+    <div
+      className={`back-to-top ${showButton ? "show" : ""}`}
+      onClick={handleBackToTopClick}
+    >
       <FontAwesomeIcon icon={iconMap["arrowup"]} />
     </div>
   );

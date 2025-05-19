@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { iconMap } from "../../../hooks/iconmap";
 
 const OurMission = ({ content }) => {
   return (
@@ -21,7 +23,7 @@ const OurMission = ({ content }) => {
               >
                 <div className="mission-card">
                   <div className="mission-icon">
-                    <i className={"fas " + elem.icon}></i>
+                    <FontAwesomeIcon icon={iconMap[elem.icon]}/>
                   </div>
                   <h3 className="h4 text-center mb-3">{elem.heading}</h3>
                   <p className="text-muted text-center"> {elem.description} </p>

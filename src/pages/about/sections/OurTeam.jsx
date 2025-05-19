@@ -1,5 +1,7 @@
 import React from "react";
 import TeamIdentity from "../../../components/ui/TeamIdentity";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { iconMap } from "../../../hooks/iconmap";
 const OurTeam = ({ content }) => {
   return (
     <section className="section">
@@ -29,7 +31,7 @@ const OurTeam = ({ content }) => {
 
         <div className="text-center mt-5" data-aos="fade-up">
           <a href="#" className="btn btn-primary-custom">
-            <i className="fas fa-users me-2"></i>Meet Full Team
+            <FontAwesomeIcon icon={iconMap["users"]}/>Meet Full Team
           </a>
         </div>
       </div>

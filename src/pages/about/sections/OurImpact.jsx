@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { iconMap } from "../../../hooks/iconmap";
 
 const OurImpact = ({ content }) => {
   return (
@@ -22,7 +24,8 @@ const OurImpact = ({ content }) => {
               >
                 <div className="stats-card">
                   <div className="stats-icon">
-                    <i className={"fas " + elem.icon}></i>
+                    <FontAwesomeIcon icon={iconMap[elem.icon]}/>
+                    
                   </div>
                   <div
                     className="stats-number counter"

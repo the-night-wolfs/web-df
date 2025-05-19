@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { iconMap } from "../../../hooks/iconmap";
 const copyToClipboard = (text) => {
   navigator.clipboard.writeText(text).then(() => {
     const notification = document.getElementById("copyNotification");
@@ -23,7 +25,7 @@ const ContactInfo = () => {
           >
             <div className="contact-card clickable" onClick={handleClip}>
               <div className="contact-icon">
-                <i className="fas fa-map-marker-alt"></i>
+                <FontAwesomeIcon icon={iconMap["mapMarkerAlt"]}/>
               </div>
               <h3>Our Location</h3>
               <p>
@@ -41,7 +43,7 @@ const ContactInfo = () => {
           >
             <div className="contact-card clickable" onClick={handleClip}>
               <div className="contact-icon">
-                <i className="fas fa-phone-alt"></i>
+                <FontAwesomeIcon icon={iconMap["phoneAlt"]}/>
               </div>
               <h3>Phone Number</h3>
               <p>+1 (555) 123-4567</p>
@@ -55,7 +57,7 @@ const ContactInfo = () => {
           >
             <div className="contact-card clickable" onClick={handleClip}>
               <div className="contact-icon">
-                <i className="fas fa-envelope"></i>
+                <FontAwesomeIcon icon={iconMap["envelope"]}/>
               </div>
               <h3>Email Address</h3>
               <p>info@yourbrand.com</p>
@@ -69,7 +71,7 @@ const ContactInfo = () => {
           >
             <div className="contact-card">
               <div className="contact-icon">
-                <i className="fas fa-clock"></i>
+                <FontAwesomeIcon icon={iconMap["clock"]}/>
               </div>
               <h3>Business Hours</h3>
               <p>

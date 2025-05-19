@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { iconMap } from "../../../hooks/iconmap";
 const Hero = () => {
   return (
     <section className="hero-section">
@@ -17,7 +19,7 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <i className="fas fa-envelope me-2"></i> Contact Us Now
+          <FontAwesomeIcon icon={iconMap["envelope"]} className="me-2"/> Contact Us Now
         </a>
       </div>
     </section>

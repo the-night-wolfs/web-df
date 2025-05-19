@@ -106,20 +106,21 @@ const AboutLayout = ({ state }) => {
   if (error) return <div>Error: {error}</div>;
   // console.log(content.dynamicContent);I
   const contentFlow = {
-    ourimpact: content.dynamicContent.ourimpact,
-    ourjourney: content.dynamicContent.ourjourney,
-    ourmission: content.dynamicContent.ourmission,
-    volunteers: content.dynamicContent.volunteers,
-    ourvalues: content.dynamicContent.ourvalues,
+    ourimpact: content.dynamicContent["ourimpact-about"],
+    ourjourney: content.dynamicContent["ourjourney-about"],
+    ourmission: content.dynamicContent["ourmission-about"],
+    volunteers: content.dynamicContent["volunteers-global"],
+    ourvalues: content.dynamicContent["ourvalues-global"]
   };
+
   return (
     <>
-      <CTA />
       <OurImpact content={contentFlow.ourimpact} />
+      <OurValues content={contentFlow.ourvalues} />
+      <OurTeam content={contentFlow.volunteers} />
       <OurJourney content={contentFlow.ourjourney} />
       <OurMission content={contentFlow.ourmission} />
-      <OurTeam content={contentFlow.volunteers} />
-      <OurValues content={contentFlow.ourvalues} />
+      <CTA />
     </>
   );
 };

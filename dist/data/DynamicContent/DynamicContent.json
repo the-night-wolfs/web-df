@@ -58,7 +58,7 @@
       }
     }
   ],
-  "ourprograms": [
+  "ourprograms-home": [
     {
       "title": "What We've Done",
       "image": {
@@ -108,7 +108,7 @@
       }
     }
   ],
-  "ourmission": [
+  "ourmission-about": [
     {
       "heading": "Education for All",
       "description": "We believe education is a fundamental right. Our programs provide learning opportunities and resources to underserved communities, helping children build a brighter future.",
@@ -131,7 +131,7 @@
       "btnLink": "#"
     }
   ],
-  "ourvalues": [
+  "ourvalues-global": [
     {
       "heading": "Integrity",
       "description": "We uphold the highest ethical standards in all our actions and decisions.",
@@ -153,7 +153,7 @@
       "icon": "fa-seedling"
     }
   ],
-  "ourimpact": [
+  "ourimpact-about": [
     {
       "work": "Student Educated",
       "targetNumber": "5000",
@@ -175,7 +175,7 @@
       "icon": "fa-home"
     }
   ],
-  "ourjourney": [
+  "ourjourney-about": [
     {
       "year": "2012",
       "title": "The Beginning",
@@ -202,7 +202,7 @@
       "description": "Operating in 12 states with over 50 programs and impacting more than 100,000 lives annually."
     }
   ],
-  "volunteers": [
+  "volunteers-global": [
     {
       "name": "Sarah Johnson",
       "role": "Community Coordinator",
@@ -237,6 +237,56 @@
       "bio": "Shares our stories and impacts through digital platforms.",
       "social": ["instagram", "twitter"],
       "image": "https://randomuser.me/api/portraits/women/33.jpg"
+    }
+  ],
+  "programs-ourprograms": [
+    {
+      "id": 1,
+      "title": "Education Empowerment",
+      "description": "Providing quality education to underprivileged children through scholarships, learning materials, and educational infrastructure support.",
+      "icon": "graduationCap",
+      "image": "https://picsum.photos/400/300",
+      "category": "Education"
+    },
+    {
+      "id": 2,
+      "title": "Healthcare Initiatives",
+      "description": "Free health camps, medical support, and awareness programs to promote better health practices in rural communities.",
+      "icon": "heartbeat",
+      "image": "https://picsum.photos/400/300",
+      "category": "Healthcare"
+    },
+    {
+      "id": 3,
+      "title": "Women Empowerment",
+      "description": "Skill development, vocational training, and entrepreneurship programs to help women become financially independent.",
+      "icon": "venus",
+      "image": "https://picsum.photos/400/300",
+      "category": "Empowerment"
+    },
+    {
+      "id": 4,
+      "title": "Rural Development",
+      "description": "Infrastructure development, clean water initiatives, and sustainable farming practices to uplift rural communities.",
+      "icon": "home",
+      "image": "https://picsum.photos/400/300",
+      "category": "Development"
+    },
+    {
+      "id": 5,
+      "title": "Environmental Conservation",
+      "description": "Tree plantation drives, waste management systems, and environmental awareness campaigns for a greener planet.",
+      "icon": "tree",
+      "image": "https://picsum.photos/400/300",
+      "category": "Environment"
+    },
+    {
+      "id": 6,
+      "title": "Disaster Relief",
+      "description": "Immediate support and long-term rehabilitation for communities affected by natural disasters and calamities.",
+      "icon": "handsHelping",
+      "image": "https://picsum.photos/400/300",
+      "category": "Relief"
     }
   ],
   "metadata": {

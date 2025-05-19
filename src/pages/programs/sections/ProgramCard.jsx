@@ -1,7 +1,7 @@
 import React from 'react';
-import './ProgramsPage.css';
-// import './ProgramCard.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { iconMap } from '../../../hooks/iconmap';
+// style are inside the programs.css
 const ProgramCard = ({ program }) => {
   return (
     <div className="program-card">
@@ -13,7 +13,7 @@ const ProgramCard = ({ program }) => {
       </div>
       <div className="program-content">
         <div className="program-icon">
-          <i className={`fas ${program.icon}`}></i>
+          <FontAwesomeIcon icon={iconMap[program.icon]} />
         </div>
         <h3 className="program-title">{program.title}</h3>
         <p className="program-description">{program.description}</p>

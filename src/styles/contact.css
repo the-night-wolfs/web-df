@@ -447,10 +447,4 @@ textarea.form-control {
   .contact-card {
     padding: 1.25rem;
   }
-  .back-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-  }
 }

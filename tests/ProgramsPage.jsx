@@ -43,7 +43,7 @@ const ProgramsPage = () => {
       id: 4,
       title: "Rural Development",
       description: "Infrastructure development, clean water initiatives, and sustainable farming practices to uplift rural communities.",
-      icon: "fa-home",
+      icon: "home",
       image: "https://picsum.photos/400/300",
       category: "Development"
     },
@@ -51,7 +51,7 @@ const ProgramsPage = () => {
       id: 5,
       title: "Environmental Conservation",
       description: "Tree plantation drives, waste management systems, and environmental awareness campaigns for a greener planet.",
-      icon: "fa-tree",
+      icon: "tree",
       image: "https://picsum.photos/400/300",
       category: "Environment"
     },
@@ -59,7 +59,7 @@ const ProgramsPage = () => {
       id: 6,
       title: "Disaster Relief",
       description: "Immediate support and long-term rehabilitation for communities affected by natural disasters and calamities.",
-      icon: "fa-hands-helping",
+      icon: "handsHelping",
       image: "https://picsum.photos/400/300",
       category: "Relief"
     }
