@@ -7,7 +7,7 @@ const ProgramsLayout = ({ state }) => {
     const { content, loading, error } = state;
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
-    const programs=content.dynamicContent;
+    const programs=content.dynamicContent['programs-ourprograms'];
     console.log(programs);
     
     const categories = ["All", "Education", "Healthcare", "Empowerment", "Development", "Environment", "Relief"];
