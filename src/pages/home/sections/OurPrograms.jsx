@@ -35,6 +35,8 @@ const OurPrograms = ({ programs }) => {
 
           <div className="carousel-inner">
             {programs?.map((item, index) => {
+              console.log(item);
+              
               return (
                 <div
                   className={`carousel-item${index === 0 ? " active" : ""}`}

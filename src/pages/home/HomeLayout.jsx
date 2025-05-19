@@ -16,7 +16,7 @@ const HomeLayout = ({ state }) => {
     ourvalues: content?.staticContent?.ourvalues,
     ourstory: content.staticContent["textmedia-global"]["aboutUs-home"],
     volunteers: content?.dynamicContent?.["volunteers-global"],
-    ourprograms: content?.dynamicContent?.["programsOurprograms"],
+    ourprograms: content?.dynamicContent?.["ourprograms-home"],
     events: content?.dynamicContent?.events
   };
   return (
