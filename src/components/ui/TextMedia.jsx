@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { iconMap } from "../../hooks/iconmap";
 
 const TextMedia = ({ content }) => {
-  console.log(content);
   return (
     <section id="about" className="py-5">
       <div className="container">
@@ -31,9 +30,8 @@ const TextMedia = ({ content }) => {
             <h2 className="fw-bold mb-4">{content.heading}</h2>
             {content.paragraph.map((elem, index) => (
               <p
-                className={`${index === 0 ? "lead" : ""} ${
-                  elem.muted ? "text-muted" : ""
-                }`}
+                className={`${index === 0 ? "lead" : ""} ${elem.muted ? "text-muted" : ""
+                  }`}
                 key={index}
               >
                 {elem.text}

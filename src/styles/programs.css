@@ -90,13 +90,6 @@
     gap: var(--space-md);
 }
 
-.btn {
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    font-size: var(--text-base);
-}
 
 /* .btn-primary {
     background-color: var(--secondary);
