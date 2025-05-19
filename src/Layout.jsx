@@ -11,7 +11,7 @@ import YouthHero from "./pages/youthcorner/sections/Hero";
 import DonateLayout from "./pages/donate/DonateLayout";
 import ContactLayout from "./pages/contact/ContactLayout";
 import ContactHero from "./pages/contact/sections/Hero";
-import ProgramsLayout from "./pages/programs/programsLayout";
+import ProgramsLayout from "./pages/programs/ProgramsLayout";
 import NotFound from "./components/errors/NotFound";
 const Layout = ({ page }) => {
   const { state } = useContent();
